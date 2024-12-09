@@ -42,4 +42,4 @@ public class Main {
     }
 }
 
-//vége commit 2
+//f2 kezdés
