@@ -41,5 +41,3 @@ public class Main {
         fw.close();
     }
 }
-
-//f2 kezdés
