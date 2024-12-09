@@ -51,7 +51,28 @@ public class Tabla {
         }
     }
 
+    public boolean uresSor(int sor) {
+        int i = 0;
+        while (i < T.length && !(T[sor][i] == 'K')) {
+            i ++;
+        }
+        if(T[sor][i] == 'K'){
+            return true;
+        }else{
+            return false;
+        }//metodusba eltárolható
+    }
 
-
+    public boolean uresOszlop(int oszlop) {
+        int i = 0;
+        while (i < T.length && !(T[i][oszlop] == 'K')) {
+            i ++;
+        }
+        if(T[oszlop][i] == 'K'){
+            return true;
+        }else{
+            return false;
+        } //metodusba eltárolható
+    }
 
 }
