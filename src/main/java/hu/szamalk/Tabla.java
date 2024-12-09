@@ -3,8 +3,10 @@ package hu.szamalk;
 import java.util.Random;
 
 public class Tabla {
+    final Random rnd = new Random();
     private char[][] T;
     private char uresCella;
+
 
     public Tabla(char üresCella) {
         this.T = new char[8][8];
@@ -35,5 +37,19 @@ public class Tabla {
         }
             return szoveg;
     }
+
+    public void elhelyez(int N) {
+        int i = 0;
+        while (i < N) {
+            int rnd1 = rnd.nextInt(0,8);
+            int rnd2 = rnd.nextInt(0,8);
+
+            if (T[rnd1][rnd2] == this.uresCella) {
+                T[rnd1][rnd2] = 'K';
+                i++;
+            }
+        }
+    }
+
 
 }
