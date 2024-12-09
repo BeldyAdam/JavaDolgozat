@@ -23,5 +23,5 @@ public class Tabla {
         }
     }
 
-
+//3. feladat vége
 }
