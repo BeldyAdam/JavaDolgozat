@@ -24,4 +24,16 @@ public class Tabla {
     }
 
 //3. feladat vége
+
+    public String megjelenit() {
+        String szoveg = "";
+        for (char[] chars : T) {
+            for (char karakter : chars) {
+                szoveg += karakter;
+            }
+            szoveg += "\n";
+        }
+            return szoveg;
+    }
+
 }
