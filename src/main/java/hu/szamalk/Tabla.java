@@ -44,12 +44,14 @@ public class Tabla {
             int rnd1 = rnd.nextInt(0,8);
             int rnd2 = rnd.nextInt(0,8);
 
-            if (T[rnd1][rnd2] == this.uresCella) {
+            if (T[rnd1][rnd2] == uresCella) {
                 T[rnd1][rnd2] = 'K';
                 i++;
             }
         }
     }
+
+
 
 
 }
