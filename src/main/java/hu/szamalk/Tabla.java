@@ -51,28 +51,48 @@ public class Tabla {
         }
     }
 
-    public boolean uresSor(int sor) {
-        int i = 0;
-        while (i < T.length && !(T[sor][i] == 'K')) {
-            i ++;
-        }
-        if(T[sor][i] == 'K'){
-            return true;
-        }else{
-            return false;
-        }//metodusba eltárolható
-    }
-
     public boolean uresOszlop(int oszlop) {
         int i = 0;
         while (i < T.length && !(T[i][oszlop] == 'K')) {
             i ++;
         }
-        if(T[oszlop][i] == 'K'){
+        if(i < T.length){
             return true;
         }else{
             return false;
-        } //metodusba eltárolható
+        }
+    }
+
+    public boolean uresSor(int sor) {
+        int i = 0;
+        while (i < T.length && !(T[sor][i] == 'K')) {
+            i ++;
+        }
+        if(i < T.length){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public int uresOszlopokSzama() {
+        int uOszlopDb = 0;
+        for (int i = 0; i < T.length; i++) {
+            if (uresOszlop(i)) {
+                uOszlopDb++;
+            }
+        }
+        return uOszlopDb;
+    }
+
+    public int uresSorokSzama() {
+        int uSorDb = 0;
+        for (int i = 0; i < T.length; i++) {
+            if (uresSor(i)) {
+                uSorDb++;
+            }
+        }
+        return uSorDb;
     }
 
 }
